@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function enterNumber(message) {
+            let number = 0;
+            do {
+                number = Number(prompt(`${message}:`));
+            }
+            while (isNaN(number) || !Number.isSafeInteger(number))
+            return number;
+        }
+        function kiemtra(number) {
+            let check = true
+            if ( number < 0 ){
+            check = false;
+            return check;
+            }
+            check = true;
+            return check;
+        }
+        function main(){
+            let a = enterNumber('nhập vào 1 số ');
+            let check = kiemtra(a);
+            document.write(check);
+        }
+        main();
+    </script>
+</body>
+
+</html>

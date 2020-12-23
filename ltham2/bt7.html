@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function enterNumber(message) {
+            let number = 0;
+            do {
+                number = Number(prompt(`${message}:`));
+            }
+            while (isNaN(number) || !Number.isSafeInteger(number))
+            return number;
+        }
+        function swap(a,b){
+            let temp = a;
+            a = b;
+            b = temp;
+            document.write(a + " ," +b);
+        }
+        function main(){
+            let a = enterNumber("nhập số t1");
+            let b = enterNumber("nhập số t2");
+            let c = swap (a,b);
+        }
+        main();
+    </script>
+</body>
+</html>
